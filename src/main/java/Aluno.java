@@ -5,6 +5,7 @@ public class Aluno {
     //Atributos
     //visibilidade Tipo nomeAtributo (padrão camelCase)
     private String nome;
+    private String sobrenome;
     private String matricula;
     private char sexo;
     private double notaProva1;
@@ -17,8 +18,9 @@ public class Aluno {
 
     }
 
-    public Aluno(String nome, String matricula, char sexo, double notaProva1, double notaProva2, double mediaExercicios, double mediaTrabalhos) {
+    public Aluno(String nome, String sobrenome, String matricula, char sexo, double notaProva1, double notaProva2, double mediaExercicios, double mediaTrabalhos) {
         this.nome = nome;
+        this.sobrenome= sobrenome;
         this.matricula = matricula;
         this.sexo = sexo;
         this.notaProva1 = notaProva1;
@@ -45,6 +47,10 @@ public class Aluno {
         }
 
         return situacao;
+    }
+
+    public String getNomeCompleto() {
+        return this.nome + " " + this.sobrenome;
     }
 
     //Métodos get e set
@@ -103,5 +109,13 @@ public class Aluno {
 
     public void setMediaExercicios(double mediaExercicios) {
         this.mediaExercicios = mediaExercicios;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 }
